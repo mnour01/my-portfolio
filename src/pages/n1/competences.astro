@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Compétences – Mehdi Nour">
+  <section class="content">
+    <h1>Compétences</h1>
+
+    <div class="category">
+      <h2>Data Science</h2>
+      <ul>
+        <li>Machine Learning</li>
+        <li>Time Series Analysis</li>
+        <li>Deep Learning</li>
+        <li>Big Data</li>
+        <li>Déploiement de modèles</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h2>Langages</h2>
+      <ul>
+        <li>R</li>
+        <li>Python (pandas, scikit-learn, Tensorflow, Pytorch)</li>
+        <li>PySpark</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h2>Bases de données</h2>
+      <ul>
+        <li>Oracle</li>
+        <li>PostgreSQL</li>
+        <li>Hive</li>
+        <li>HBase</li>
+        <li>Impala</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h2>Visualisation</h2>
+      <ul>
+        <li>Tableau</li>
+        <li>Power BI</li>
+        <li>Shiny</li>
+        <li>Dash</li>
+        <li>SAP</li>
+        <li>Superset</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h2>Data Gouvernance</h2>
+      <ul>
+        <li>Data Quality</li>
+        <li>Structuration des données</li>
+        <li>Conformité RGPD</li>
+      </ul>
+    </div>
+
+    <div class="category">
+      <h2>Autres Compétences</h2>
+      <ul>
+        <li>Docker, Kubernetes</li>
+        <li>JavaScript, HTML, CSS</li>
+        <li>Linux</li>
+        <li>Supervision des modèles ML (Eurybia, GLM)</li>
+        <li>Agents IA (RAG, OpenAI, Mistral, Claude, Ollama)</li>
+      </ul>
+    </div>
+  </section>
+
+  <style>
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .category {
+      background: #1a1f2e;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0, 224, 198, 0.07);
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--accent-light);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      color: #cdd6e2;
+    }
+
+    li {
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</BaseLayout>

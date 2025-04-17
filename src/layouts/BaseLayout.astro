@@ -1,0 +1,169 @@
+---
+const { title = "Portfolio – Mehdi Nour" } = Astro.props;
+const basePath = "/my-portfolio";
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f4f7fb;
+        --bg-alt: #e4ecf1;
+        --accent: #70c1b3;
+        --accent-hover: #56a69c;
+        --accent-light: #c3e6e1;
+        --text: #1a1a1a;
+        --muted: #6b7280;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, var(--bg), var(--bg-alt), #edf7f5, #f4f0fc);
+        background-size: 400% 400%;
+        animation: gradientLoop 20s ease infinite;
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      @keyframes gradientLoop {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(circle at 10% 20%, rgba(255,255,255,0.3) 0%, transparent 60%),
+          radial-gradient(circle at 80% 80%, rgba(200,230,255,0.25) 0%, transparent 70%),
+          url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="2" fill="%2370c1b3"/><circle cx="60" cy="60" r="2" fill="%2370c1b3"/><line x1="20" y1="20" x2="60" y2="60" stroke="%2370c1b3" stroke-width="0.5"/></svg>');
+        background-repeat: no-repeat;
+        background-position: top left, bottom right, center;
+        background-size: 400px, 400px, 200px;
+        opacity: 0.1;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      header {
+        background: linear-gradient(90deg, var(--accent), var(--accent-light));
+        padding: 1.5rem 2rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: #fff;
+        font-family: 'Orbitron', sans-serif;
+        letter-spacing: 0.5px;
+        position: relative;
+        z-index: 2;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        background: var(--accent-light);
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+      }
+
+      nav a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+
+      nav a:hover {
+        background: var(--accent);
+        color: white;
+      }
+
+      main {
+        flex: 1;
+        padding: 2rem;
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      footer {
+        background: linear-gradient(135deg, var(--bg-alt), #ffffff);
+        color: var(--muted);
+        text-align: center;
+        padding: 2rem 1rem;
+        font-size: 0.95rem;
+        border-top: 1px solid #ddd;
+        margin-top: auto;
+        position: relative;
+        z-index: 2;
+      }
+
+      a {
+        color: var(--accent-hover);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav a {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      Mehdi Nour — Portfolio Data Scientist
+    </header>
+
+    <nav>
+      <a href={`${basePath}/`}>Accueil</a>
+      <a href={`${basePath}/experiences`}>Expériences</a>
+      <a href={`${basePath}/formations`}>Formations</a>
+      <a href={`${basePath}/competences`}>Compétences</a>
+      <a href={`${basePath}/langues`}>Langues</a>
+      <a href={`${basePath}/interets`}>Centres d’intérêt</a>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      &copy; {new Date().getFullYear()} Mehdi Nour — <a href="mailto:nour.mehdi@yahoo.com">Contact</a>
+    </footer>
+  </body>
+</html>

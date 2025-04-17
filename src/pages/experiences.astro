@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Expériences – Mehdi Nour">
+  <h1>Expériences Professionnelles</h1>
+
+  <nav class="experience-nav">
+    <a href="#eni">ENI Plenitude</a>
+    <a href="#edf">EDF</a>
+    <a href="#bouygues">Bouygues Télécom</a>
+  </nav>
+
+  <section class="experience-card" id="eni">
+    <h2>Data Scientist – Business Intelligence</h2>
+    <p class="meta">ENI Plenitude — Levallois, France | 09-2023 – Présent</p>
+
+    <div class="project">
+      <h4>📊 Suivi & Analyse de l’activation des contrats B2B</h4>
+      <p>Analyse des étapes du processus d’activation des contrats B2B, identification des points de blocage, optimisation des délais, KPI de suivi.</p>
+      <p><strong>Résultat :</strong> Meilleur pilotage des délais d’activation, meilleure visibilité multi-sites.</p>
+      <div class="tags">Postgres | R | Tableau</div>
+    </div>
+
+    <div class="project">
+      <h4>⚙️ Automatisation de l’intégration CRM</h4>
+      <p>Déploiement d’une solution Python d’intégration en masse des contrats B2B dans SAP.</p>
+      <p><strong>Résultat :</strong> Réduction drastique de la charge opérationnelle.</p>
+      <div class="tags">Python | SAP</div>
+    </div>
+
+    <div class="project">
+      <h4>📈 Modèle de prévision du volume d'appels</h4>
+      <p>Anticipation du volume d'appels clients avec Prophet pour affiner les prévisions budgétaires.</p>
+      <p><strong>Résultat :</strong> Factures plus fiables et alignées aux appels réels.</p>
+      <div class="tags">Python | Prophet</div>
+    </div>
+
+    <div class="project">
+      <h4>🔁 Automatisation & supervision</h4>
+      <p>Automatisation du run des traitements, supervision qualité des données transmises aux métiers.</p>
+      <div class="tags">Python</div>
+    </div>
+
+    <div class="project">
+      <h4>☁️ Migration vers Azure</h4>
+      <p>Migration des processus vers Azure avec Hive & Databricks. Collaboration avec les équipes tech pour garantir conformité et performance.</p>
+      <p><strong>Résultat :</strong> Transition fluide et amélioration de la scalabilité.</p>
+      <div class="tags">Azure | Hive | Databricks | Power BI</div>
+    </div>
+  </section>
+
+  <section class="experience-card" id="edf">
+    <h2>Data Scientist – Centre de Solutions & Compétences DS & IA</h2>
+    <p class="meta">EDF — Colombes, France | 10-2021 – 08-2023</p>
+
+    <div class="project">
+      <h4>🧩 Datamarts Clients PRO</h4>
+      <p>Construction d’un entrepôt de données Oracle enrichi à partir de flux Hive, avec métriques métiers pour analyses internes.</p>
+      <div class="tags">Oracle | Hive</div>
+    </div>
+
+    <div class="project">
+      <h4>🧠 Modèle de prédiction de churn</h4>
+      <p>Modèle Random Forest structuré en classes : requête, modélisation, optimisation, interprétabilité avec TreeInterpreter.</p>
+      <div class="tags">Python | Random Forest | TreeInterpreter</div>
+    </div>
+
+    <div class="project">
+      <h4>🗺️ Cartographie des projets EDF</h4>
+      <p>Application R Shiny interactive avec Leaflet & OpenStreetMap pour visualiser les projets EDF en France.</p>
+      <div class="tags">R Shiny | Leaflet | OpenStreetMap</div>
+    </div>
+
+    <div class="project">
+      <h4>📉 Tableau de bord Linky/Gazpar</h4>
+      <p>Visualisation du taux de déploiement des compteurs, suivi des objectifs via tableau R Shiny.</p>
+      <div class="tags">R Shiny</div>
+    </div>
+
+    <div class="project">
+      <h4>🕵️ Tracking des utilisateurs web</h4>
+      <p>Intégration Matomo via JavaScript dans Shiny & Dash pour tracking utilisateur conforme RGPD.</p>
+      <div class="tags">Matomo | JavaScript</div>
+    </div>
+
+    <div class="project">
+      <h4>🛡️ Monitoring des modèles ML</h4>
+      <p>Intégration de la librairie Eurybia pour superviser les modèles de machine learning en production.</p>
+      <div class="tags">Python | Eurybia</div>
+    </div>
+  </section>
+
+  <section class="experience-card" id="bouygues">
+    <h2>Data Scientist – Optimisation QoS (Section Proactif)</h2>
+    <p class="meta">Bouygues Télécom — Vélizy, France | 03-2018 – 10-2021</p>
+
+    <div class="project">
+      <h4>🔎 KPI de continuité d’accès</h4>
+      <p>Score d’accès xDSL client basé sur coupures, croisement avec appels clients et tickets SAV.</p>
+      <div class="tags">Hive | PySpark | Airflow | Tableau</div>
+    </div>
+
+    <div class="project">
+      <h4>⚡ Optimisation du débit xDSL</h4>
+      <p>Algorithmes d’aide à la décision sur lignes stables (marge, désactivation TV HD...)</p>
+    </div>
+
+    <div class="project">
+      <h4>📊 Alerting et dashboards Zéro Action</h4>
+      <p>Suivi des KPI QoS post-MEP firmware avec pipeline PySpark + PostgreSQL + Dashboard Tableau.</p>
+      <div class="tags">PySpark | PostgreSQL | Tableau</div>
+    </div>
+
+    <div class="project">
+      <h4>⚙️ Validation Big Data</h4>
+      <p>Tests de charge sur Cloudera pour KPIs gourmands, avec contrôles qualité automatiques.</p>
+      <div class="tags">Cloudera | Airflow | Tableau</div>
+    </div>
+  </section>
+
+  <style>
+    .experience-nav {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+      flex-wrap: wrap;
+    }
+
+    .experience-nav a {
+      padding: 0.5rem 1rem;
+      background: var(--accent-light);
+      color: var(--text);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .experience-nav a:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .experience-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .experience-card h2 {
+      margin-bottom: 0.5rem;
+      color: var(--accent-hover);
+    }
+
+    .experience-card .meta {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 1rem;
+    }
+
+    .project {
+      margin-bottom: 1.5rem;
+    }
+
+    .project h4 {
+      margin: 0.8rem 0 0.3rem;
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+
+    .tags {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tags::before {
+      content: "🛠️";
+      margin-right: 0.5rem;
+    }
+
+    .tags span, .tags {
+      background: #eef6f4;
+      color: #0d4e45;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  </style>
+</BaseLayout>

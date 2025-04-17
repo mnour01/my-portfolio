@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Formations – Mehdi Nour">
+  <section class="content">
+    <h1>Formations</h1>
+
+    <article>
+      <h2>Master 2 Professionnel – Analyses Statistiques et Traitement des Données</h2>
+      <h4>Université Clermont Auvergne</h4>
+    </article>
+
+    <article>
+      <h2>Licence – Sciences Mathématiques Appliquées, spécialité Statistiques</h2>
+      <h4>Faculté des sciences appliquées</h4>
+    </article>
+  </section>
+
+  <style>
+    .content {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    article {
+      background: #1a1f2e;
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 224, 198, 0.07);
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      color: var(--accent-light);
+    }
+
+    h4 {
+      font-size: 0.95rem;
+      color: #cdd6e2;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</BaseLayout>

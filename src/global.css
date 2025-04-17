@@ -1,0 +1,53 @@
+
+:root {
+  --bg-main: #fefefe;
+  --bg-alt: #f5f7fa;
+  --text-main: #1d1d1f;
+  --accent-main: #6f94ff;
+  --accent-soft: #a9c9ff;
+  --accent-green: #98d7c2;
+  --accent-pink: #f5cfd2;
+  --border: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background: var(--bg-alt);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--accent-main);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-green);
+}
+
+section {
+  padding: 2rem 1.5rem;
+}
+
+h1, h2, h3 {
+  color: var(--accent-main);
+}
+
+.card {
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
